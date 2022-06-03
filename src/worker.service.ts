@@ -10,7 +10,7 @@ export class WorkerService {
   private readonly coreBaseURL = process.env.SIA_API_URL;
 
   updateExternalId(id: string, externalId: string) {
-    return axios.put(`${this.coreBaseURL}/notification/${id}`, { externalId });
+    return axios.put(`${this.coreBaseURL}/notifications/${id}`, { externalId });
   }
 
   @EventPattern('processJob')
